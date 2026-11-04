@@ -1,0 +1,20 @@
+models/
+# secrets
+.env
+# env
+.venv/
+__pycache__/
+*.pyc
+# outputs
+logs/
+outputs/
+static/
+*.png
+*.jpg
+!docs/**/*.png
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+*.jpeg
+test_image/
