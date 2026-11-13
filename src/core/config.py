@@ -12,8 +12,19 @@ os.environ.setdefault("PYTORCH_ENABLE_MPS_FALLBACK", "1")
 
 
 class ModelConfig(BaseModel):
-    REPO: str = "briaai/Fibo-2.0-edit-turbo"
-    MODEL_DIR: Path = Path("./models")
+    ZIMAGE_REPO: str = "Tongyi-MAI/Z-Image-Turbo"
+    CONTROLNET_REPO: str = "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union-2.0"
+    CONTROLNET_FILE: str = "Z-Image-Turbo-Fun-Controlnet-Union-2.1.safetensors"
+    STEPS: int = 9
+    CONTROL_SCALE: float = 0.8
+
+    # vision helpers
+    SAM3_REPO: str = "facebook/sam3"
+    SAM3_THRESHOLD: float = 0.4
+    KEEP_SAM_LOADED: bool = False
+    DEPTH_REPO: str = "depth-anything/Depth-Anything-V2-Small-hf"
+
+    MODEL_DIR: Path = Path("./train_models")
     DEVICE: Literal["mps", "cuda", "cpu"] = "mps"
     QUANT: Literal["int8", "none"] = "int8"
     AUTO_COMPILE: bool = False

@@ -1,4 +1,4 @@
-models/
+train_models/
 # secrets
 .env
 # env
