@@ -3,7 +3,7 @@ from dataclasses import dataclass
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
-from src.models.segmentaion import Detection
+from src.models.segmentation import Detection
 
 # Text prompts the facade workflow asks SAM 3 for.
 GROUND_PROMPTS = ["ground", "driveway", "pavement"]

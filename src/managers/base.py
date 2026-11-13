@@ -1,6 +1,6 @@
 from src.models.diffusion import ZImageLoader
 from src.models.memory_manager import MemoryManager
-from src.models.segmentaion import DepthLoader, SAM3Loader
+from src.models.segmentation import DepthLoader, SAM3Loader
 
 DEPTH = "DEPTH"
 SAM3 = "SAM3"
